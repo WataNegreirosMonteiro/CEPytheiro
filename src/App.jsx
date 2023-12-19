@@ -1,6 +1,7 @@
 import Banner from "./components/molecules/Banner.jsx";
 import {Header} from "./components/organisms/Header.jsx";
 import Footer from "./components/templates/Footer.jsx";
+import {DataCard} from "./components/atoms/DataCard.jsx";
 
 export default function App() {
     return (
@@ -124,69 +125,14 @@ export default function App() {
             </div>
 
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-                <nav className="max-w-6xl mx-auto grid sm:flex gap-y-px sm:gap-y-0 sm:gap-x-4" aria-label="Tabs"
-                     role="tablist">
-                    <button type="button"
-                            className="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 active"
-                            id="tabs-with-card-item-1" data-hs-tab="#tabs-with-card-1" aria-controls="tabs-with-card-1"
-                            role="tab">
-                        <svg
-                            className="flex-shrink-0 hidden sm:block h-7 w-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <path
-                                d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path>
-                        </svg>
-                        <span className="mt-5">
-        <span
-            className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">CEP</span>
-        <span className="hidden lg:block mt-2 text-gray-800 dark:text-gray-200">00000-000 foi o Código de Endereçamento Postal inserido.</span>
-      </span>
-                    </button>
-
-                    <button type="button"
-                            className="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            id="tabs-with-card-item-2" data-hs-tab="#tabs-with-card-2" aria-controls="tabs-with-card-2"
-                            role="tab">
-                        <svg
-                            className="flex-shrink-0 hidden sm:block h-7 w-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <path
-                                d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
-                        </svg>
-                        <span className="mt-5">
-        <span
-            className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">Logradouro</span>
-        <span className="hidden lg:block mt-2 text-gray-800 dark:text-gray-200">EXEMPLO foi o logradouro encontrado a partir do CEP fornecido.</span>
-      </span>
-                    </button>
-
-                    <button type="button"
-                            className="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            id="tabs-with-card-item-3" data-hs-tab="#tabs-with-card-3" aria-controls="tabs-with-card-3"
-                            role="tab">
-                        <svg
-                            className="flex-shrink-0 hidden sm:block h-7 w-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <path
-                                d="M216,152H168V104h48a8,8,0,0,0,0-16H168V40a8,8,0,0,0-16,0V88H104V40a8,8,0,0,0-16,0V88H40a8,8,0,0,0,0,16H88v48H40a8,8,0,0,0,0,16H88v48a8,8,0,0,0,16,0V168h48v48a8,8,0,0,0,16,0V168h48a8,8,0,0,0,0-16Zm-112,0V104h48v48Z"></path>
-                        </svg>
-                        <span className="mt-5">
-        <span
-            className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">DDD</span>
-        <span className="hidden lg:block mt-2 text-gray-800 dark:text-gray-200">00 foi o código de Discagem direta à distância encontrado.</span>
-      </span>
-                    </button>
+                <nav className="max-w-6xl mx-auto grid sm:flex gap-y-px sm:gap-y-0 sm:gap-x-4" aria-label="Tabs" role="tablist">
+                    <DataCard type='CEP' data={123}/>
+                    <DataCard type='Logradouro' data={123}/>
+                    <DataCard type='DDD' data={123}/>
                 </nav>
-
             </div>
 
-            <Footer />
+            <Footer/>
         </main>
     )
 }
