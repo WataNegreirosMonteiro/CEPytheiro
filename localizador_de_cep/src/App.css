@@ -1,0 +1,105 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+ 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  background-color:rgba(28, 28, 28, 1);
+}
+
+.logo{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: girarIcone 1.6s;
+}
+
+@keyframes girarIcone{
+  from{
+    transform: translateX(-200px);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+.input{
+  width: 26%;
+  
+  display:flex;
+  justify-content: space-around;
+
+  margin-top: 0.5rem;
+  gap: 0;
+  padding: 0.5rem;
+  background: #282828;
+  border-radius: 5px;
+  
+}
+
+input{
+  width: 100%;
+
+  display:flex;
+  justify-content: space-around;
+  
+  border: none;
+  background: #282828;
+  color: gray;
+  outline: none;
+}
+
+.logoInformacoes{ 
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.botao{
+  border: 0;
+  background:transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.botao:hover{
+  transform: scale(1.3);
+}
+
+.propaganda{
+  margin: 1rem;
+}
+
+.cep{
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+  margin-top: 2rem;
+}
+
+.imgPe{
+  width: 100vw;
+  height: 100px;
+  
+  margin: 0;
+  padding: 0;
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  bottom: 0;
+  background-color: #7cb697;
+
+  line-height: 100px;
+}
