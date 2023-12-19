@@ -5,6 +5,7 @@ import { MapPin, RoadHorizon, Flag, Signpost, Buildings, HashStraight } from "@p
 import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
 import Label from "./components/atoms/Label.jsx";
 import Input from "./components/atoms/Input.jsx";
+import ButtonSearch from "./components/atoms/ButtonSearch.jsx";
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
@@ -25,16 +26,7 @@ export default function App() {
                                         <Label text='Insira o seu CEP' />
                                         <Input type='email' name='hs-search-article-1" id="hs-search-article-1' placeholder="Insira o seu CEP" />
                                     </div>
-                                    <div class="flex-[0_0_auto]">
-                                        <a class="w-[46px] h-[46px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                           href="#">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    <ButtonSearch />
                                 </div>
                             </form>
                             <DecorativeLine type='left' />
