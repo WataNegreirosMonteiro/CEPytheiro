@@ -4,6 +4,7 @@ import TitleDescription from "./components/atoms/TitleDescription.jsx";
 import { MapPin, RoadHorizon, Flag, Signpost, Buildings, HashStraight } from "@phosphor-icons/react";
 import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
 import Label from "./components/atoms/Label.jsx";
+import Input from "./components/atoms/Input.jsx";
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
@@ -22,9 +23,7 @@ export default function App() {
                                     class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2]">
                                     <div class="flex-[1_0_0%]">
                                         <Label text='Insira o seu CEP' />
-                                        <input type="email" name="hs-search-article-1" id="hs-search-article-1"
-                                               class="py-2.5 px-4 block w-full border-transparent rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
-                                               placeholder="Insira o seu CEP    "/>
+                                        <Input type='email' name='hs-search-article-1" id="hs-search-article-1' placeholder="Insira o seu CEP" />
                                     </div>
                                     <div class="flex-[0_0_auto]">
                                         <a class="w-[46px] h-[46px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
