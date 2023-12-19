@@ -39,7 +39,8 @@ export default function App() {
         <main className="w-full flex justify-center flex-col">
             <Banner description='Saiba mais e veje mais projetos' buttonText='LinkedIn' />
             <Header handleSearch={handleData} />
-            { data.cep && <ContentTab data={data} /> }
+            {/*{ data.cep && <ContentTab data={data} /> }*/}
+            { true && <ContentTab data={data} /> }
             <Footer />
         </main>
     )
