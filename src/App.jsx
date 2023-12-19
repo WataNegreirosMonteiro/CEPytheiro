@@ -1,35 +1,19 @@
+import Banner from "./components/molecules/Banner.jsx";
+import Title from "./components/atoms/Title.jsx";
+import TitleDescription from "./components/atoms/TitleDescription.jsx";
+import { MapPin, RoadHorizon, Flag, Signpost, Buildings, HashStraight } from "@phosphor-icons/react";
+import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
-            <div className="min-w-full">
-                <div
-                    className="bg-blue-600 bg-[url('https://preline.co/assets/svg/examples/abstract-1.svg')] bg-no-repeat bg-cover bg-center p-4 rounded-lg text-center">
-                    <p className="me-2 inline-block text-white">
-                        Saiba mais e veja mais projetos
-                    </p>
-                    <a className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border-2 border-white text-white hover:border-white/70 hover:text-white/70 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                       target="__blank" href="https://www.linkedin.com/in/wata-negreiros-monteiro-2a94ab1a7/">
-                        LinkedIn
-                        <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+            <Banner description='Saiba mais e veje mais projetos' buttonText='LinkedIn'/>
 
             <div class="relative overflow-hidden">
                 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
                     <div class="text-center">
-                        <h1 class="text-4xl sm:text-6xl font-bold text-gray-800 dark:text-gray-200">
-                            CEPytheiro
-                        </h1>
 
-                        <p class="mt-3 text-gray-600 dark:text-gray-400">
-                            Navegando pelo melhor para você! Descubra estados, bairros e ruas de forma descomplicada e
-                            inovadora.
-                        </p>
+                        <Title text='CEPytheiro' />
+                        <TitleDescription text='Navegando pelo melhor para você! Descubra estados, bairros e ruas de forma descomplicada e inovadora.' />
 
                         <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
                             <form>
@@ -55,82 +39,33 @@ export default function App() {
                                     </div>
                                 </div>
                             </form>
-
-                            <div class="hidden md:block absolute top-0 end-0 -translate-y-12 translate-x-20">
-                                <svg class="w-16 h-auto text-orange-500" width="121" height="135" viewBox="0 0 121 135"
-                                     fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor"
-                                          stroke-width="10" stroke-linecap="round"/>
-                                    <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5"
-                                          stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
-                                    <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874"
-                                          stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-
-                            <div class="hidden md:block absolute bottom-0 start-0 translate-y-10 -translate-x-32">
-                                <svg class="w-40 h-auto text-cyan-500" width="347" height="188" viewBox="0 0 347 188"
-                                     fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426"
-                                        stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
-                                </svg>
-                            </div>
+                            <DecorativeLine type='left' />
+                            <DecorativeLine type='right' />
                         </div>
 
                         <div class="mt-10 sm:mt-20">
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <MapPin size={16} />
                                 CEP
                             </a>
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <RoadHorizon size={16} />
                                 Logradouro
                             </a>
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M34.76,42A8,8,0,0,0,32,48V216a8,8,0,0,0,16,0V171.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V48A8,8,0,0,0,210.76,42c-28,24.23-51.72,12.49-79.21-1.12C103.07,26.76,70.78,10.79,34.76,42ZM208,164.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V51.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <Flag size={16} />
                                 Estado
                             </a>
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M246,106.65l-36-40A8,8,0,0,0,204,64H136V32a8,8,0,0,0-16,0V64H40A16,16,0,0,0,24,80v64a16,16,0,0,0,16,16h80v64a8,8,0,0,0,16,0V160h68a8,8,0,0,0,5.95-2.65l36-40A8,8,0,0,0,246,106.65ZM200.44,144H40V80H200.44l28.8,32Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <Signpost size={16} />
                                 Bairro
                             </a>
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <Buildings size={16} />
                                 Localidade
                             </a>
-                            <a class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <svg className="flex-shrink-0 w-3 h-auto" xmlns="http://www.w3.org/2000/svg" width="16"
-                                     height="16" fill="currentColor"
-                                     viewBox="0 0 256 256">
-                                    <path
-                                        d="M216,152H168V104h48a8,8,0,0,0,0-16H168V40a8,8,0,0,0-16,0V88H104V40a8,8,0,0,0-16,0V88H40a8,8,0,0,0,0,16H88v48H40a8,8,0,0,0,0,16H88v48a8,8,0,0,0,16,0V168h48v48a8,8,0,0,0,16,0V168h48a8,8,0,0,0,0-16Zm-112,0V104h48v48Z"></path>
-                                </svg>
+                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <HashStraight size={16} />
                                 DDD
                             </a>
                         </div>
