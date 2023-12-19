@@ -6,10 +6,10 @@ import Banner from "./components/molecules/Banner.jsx";
 import { Header } from "./components/organisms/Header.jsx";
 import Footer from "./components/templates/Footer.jsx";
 import ContentTab from "./components/organisms/ContentTab.jsx";
-import api from "../localizador_de_cep/src/services/api.js";
+import api from "./services/api.js";
 
 export default function App() {
-    const [data, setData] = useState({});
+    const [data, setData] = useState(false);
     const notify = (msg) => {
         toast.error(msg, {
             position: "top-right",
