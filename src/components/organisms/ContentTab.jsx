@@ -3,7 +3,7 @@ import VerticalTabCard from "../atoms/VerticalTabCard.jsx";
 import DecorativeLine from "../atoms/DecorativeLine.jsx";
 import {DataCard} from "../atoms/DataCard.jsx";
 
-export default function ContentTab() {
+export default function ContentTab({ data }) {
     return (
         <>
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -13,9 +13,9 @@ export default function ContentTab() {
                             <VerticalTabTitle text='Informações encontradas com base no seu CEP'/>
 
                             <nav className="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
-                                <VerticalTabCard type='Estado' data={2346}/>
-                                <VerticalTabCard type='Localidade' data={2346}/>
-                                <VerticalTabCard type='Bairro' data={2346}/>
+                                <VerticalTabCard type='Estado' data={data.uf}/>
+                                <VerticalTabCard type='Localidade' data={data.localidade}/>
+                                <VerticalTabCard type='Bairro' data={data.bairro}/>
                             </nav>
                         </div>
 
@@ -44,9 +44,9 @@ export default function ContentTab() {
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 <nav className="max-w-6xl mx-auto grid sm:flex gap-y-px sm:gap-y-0 sm:gap-x-4" aria-label="Tabs"
                      role="tablist">
-                    <DataCard type='CEP' data={123}/>
-                    <DataCard type='Logradouro' data={123}/>
-                    <DataCard type='DDD' data={123}/>
+                    <DataCard type='CEP' data={data.cep}/>
+                    <DataCard type='Logradouro' data={data.logradouro}/>
+                    <DataCard type='DDD' data={data.ddd}/>
                 </nav>
             </div>
         </>
