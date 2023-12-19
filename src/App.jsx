@@ -1,31 +1,11 @@
 import Banner from "./components/molecules/Banner.jsx";
-import Title from "./components/atoms/Title.jsx";
-import TitleDescription from "./components/atoms/TitleDescription.jsx";
-import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
-import Form from "./components/organisms/Form.jsx";
-import DataSought from "./components/molecules/DataSought.jsx";
+import {Header} from "./components/organisms/Header.jsx";
+
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
             <Banner description='Saiba mais e veje mais projetos' buttonText='LinkedIn'/>
-
-            <div class="relative overflow-hidden">
-                <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
-                    <div class="text-center">
-
-                        <Title text='CEPytheiro' />
-                        <TitleDescription text='Navegando pelo melhor para você! Descubra estados, bairros e ruas de forma descomplicada e inovadora.' />
-
-                        <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
-                            <Form />
-                            <DecorativeLine type='left' />
-                            <DecorativeLine type='right' />
-                        </div>
-
-                        <DataSought />
-                    </div>
-                </div>
-            </div>
+            <Header/>
 
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 <div className="relative p-6 md:p-16">
@@ -217,7 +197,6 @@ export default function App() {
                     </div>
 
                     <div className="mt-3 space-x-2">
-
                         <a className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
                            href="#">
                             <svg className="flex-shrink-0 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16"
