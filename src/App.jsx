@@ -1,12 +1,9 @@
 import Banner from "./components/molecules/Banner.jsx";
 import Title from "./components/atoms/Title.jsx";
 import TitleDescription from "./components/atoms/TitleDescription.jsx";
-import { MapPin, RoadHorizon, Flag, Signpost, Buildings, HashStraight } from "@phosphor-icons/react";
 import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
-import Label from "./components/atoms/Label.jsx";
-import Input from "./components/atoms/Input.jsx";
-import ButtonSearch from "./components/atoms/ButtonSearch.jsx";
 import Form from "./components/organisms/Form.jsx";
+import DataSought from "./components/molecules/DataSought.jsx";
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
@@ -25,32 +22,7 @@ export default function App() {
                             <DecorativeLine type='right' />
                         </div>
 
-                        <div class="mt-10 sm:mt-20">
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <MapPin size={16} />
-                                CEP
-                            </a>
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <RoadHorizon size={16} />
-                                Logradouro
-                            </a>
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <Flag size={16} />
-                                Estado
-                            </a>
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <Signpost size={16} />
-                                Bairro
-                            </a>
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <Buildings size={16} />
-                                Localidade
-                            </a>
-                            <a class="align-middle m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <HashStraight size={16} />
-                                DDD
-                            </a>
-                        </div>
+                        <DataSought />
                     </div>
                 </div>
             </div>
