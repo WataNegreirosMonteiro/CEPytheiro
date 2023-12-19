@@ -6,6 +6,7 @@ import DecorativeLine from "./components/atoms/DecorativeLine.jsx";
 import Label from "./components/atoms/Label.jsx";
 import Input from "./components/atoms/Input.jsx";
 import ButtonSearch from "./components/atoms/ButtonSearch.jsx";
+import Form from "./components/organisms/Form.jsx";
 export default function App() {
     return (
         <main className="w-full flex justify-center flex-col">
@@ -19,16 +20,7 @@ export default function App() {
                         <TitleDescription text='Navegando pelo melhor para você! Descubra estados, bairros e ruas de forma descomplicada e inovadora.' />
 
                         <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
-                            <form>
-                                <div
-                                    class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2]">
-                                    <div class="flex-[1_0_0%]">
-                                        <Label text='Insira o seu CEP' />
-                                        <Input type='email' name='hs-search-article-1" id="hs-search-article-1' placeholder="Insira o seu CEP" />
-                                    </div>
-                                    <ButtonSearch />
-                                </div>
-                            </form>
+                            <Form />
                             <DecorativeLine type='left' />
                             <DecorativeLine type='right' />
                         </div>
