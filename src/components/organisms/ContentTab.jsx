@@ -28,16 +28,10 @@ export default function ContentTab({ data }) {
                             <div className="relative">
                                 <div>
                                     <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-                                        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2] h-80">
+                                        <MapContainer center={data.position} zoom={8} scrollWheelZoom={false} className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2] h-80">
                                             <TileLayer
-                                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                             />
-                                            <Marker position={[51.505, -0.09]}>
-                                                <Popup>
-                                                    popup aqui
-                                                </Popup>
-                                            </Marker>
                                         </MapContainer>
                                     </div>
                                 </div>
